@@ -12,12 +12,20 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
-
-//type your code here
+```
+int stack[40],top,i; void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/2a713552-ddf6-42ac-a265-ec997526d0cb)
+
 
 
 
@@ -35,12 +43,26 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
+```
+int size=3,top=1; float stack[40];
+void push (float data)
+{
+if (top==size-1 )
+{
+printf("stack is full\n");
+}
+else
+{
+top ++; stack[top] = data;
+}
+}
+```
 
-//type your code here
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/e3838830-dd79-413e-80d8-0db33e8a019b)
+
 
 
 
@@ -61,12 +83,28 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
+```
+int queue[50], rear, front,i; void display()
+{
+if(front==-1)
+{
+printf("No elements to display");
+}
+else
+{
+for(i=front;i<=rear;i++)
+{
+printf("%d ",queue[i]);
+}
+}
+}
+```
 
-//type your code here
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/2da5ab8c-fc0e-4715-9e44-065288f91ce8)
+
 
 
 Result:
@@ -85,12 +123,26 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
+```
+int size=4, rear=-1, front=-1; float queue[50];
+void enqueue(float data)
+{
+if(rear<size)
+{
+if(front==-1)
+{
+front=0;
+}
+rear=rear+1; queue[rear]=data;
+}
+}
+```
 
-//type your code here
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/03fc86cd-3a06-433f-b8d9-55402b8b941d)
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -120,12 +172,27 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
+```
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
+```
 
-//type your code here
+
+
 
 Output:
+![image](https://github.com/user-attachments/assets/329db24a-94a1-4e1d-b940-570adce9c368)
 
-//paste your output here
+
 
 
 Result:
